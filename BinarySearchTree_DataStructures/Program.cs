@@ -1,5 +1,5 @@
 ﻿BinarySearchTree_DataStructures.Binary_Search_tree_DataStructures<int> tree = new BinarySearchTree_DataStructures.Binary_Search_tree_DataStructures<int>(0);
-Console.WriteLine("Binary Search Tree Operations : \n0.Exit\n1.Add node\n2.Display tree\nEnter your choice:");
+Console.WriteLine("Binary Search Tree Operations : \n0.Exit\n1.Add node\n2.Display tree\n3.Search node in tree\nEnter your choice:");
 int option = Convert.ToInt32(Console.ReadLine());
 while (option != 0)
 {
@@ -20,10 +20,15 @@ while (option != 0)
         case 2:
             tree.Display();
             break;
+        case 3:
+            Console.WriteLine("Enter node to search:");
+            int element = Convert.ToInt32(Console.ReadLine());
+            tree.search(element, tree);
+            break;
         default:
             Console.WriteLine("Enter valid option.");
             break;
     }
-    Console.WriteLine("BST Operations\n0.Exit\n1.Add node\n2.Display tree\nEnter your choice:");
+    Console.WriteLine("BST Operations\n0.Exit\n1.Add node\n2.Display tree\n3.Search node in tree\nEnter your choice:");
     option = Convert.ToInt32(Console.ReadLine());
 }
